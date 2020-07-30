@@ -10,7 +10,7 @@ yarn-error.log
 
 # Xcode
 #
-build/
+ios/build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -30,11 +30,20 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
-build/
-.idea
+android/build
+android/.idea
 .gradle
 local.properties
 *.iml
+
+# iOS
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.app.dSYM.zip
 
 # BUCK
 buck-out/
