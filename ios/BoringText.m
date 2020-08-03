@@ -1,5 +1,6 @@
 // BoringText.m
 #import <UIKit/UIKit.h>
+#import <OSLog/OSLog.h>
 
 #import <React/RCTViewManager.h>
 
@@ -8,8 +9,8 @@
 
 @implementation BoringText
 {
-    NSNumber *fontSize;
     UILabel *label;
+    NSNumber *fontSize;
 }
 
 RCT_EXPORT_MODULE()
@@ -26,8 +27,9 @@ RCT_EXPORT_VIEW_PROPERTY(text, NSString);
 
 RCT_CUSTOM_VIEW_PROPERTY(fontSize, NSNumber, UILabel)
 {
-  label.font = [UIFont systemFontOfSize:[fontSize floatValue]];
+  NSLog(@"Setting font size to %ld", fontSize);
+  UIFont *font = view.font;
+  view.font = [font fontWithSize:[fontSize doubleValue]];
 }
-
 
 @end

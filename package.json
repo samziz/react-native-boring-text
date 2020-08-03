@@ -2,7 +2,7 @@
   "name": "react-native-boring-text",
   "title": "React Native Boring Text",
   "version": "0.0.1",
-  "description": "This module enables you to create text components in React Native which don't incur the render cost of <Text/> (which registers touch handlers).",
+  "description": "**DO NOT USE THIS IN PRODUCTION UNLESS YOU HATE YOUR JOB OR YOURSELF** This module enables you to create text components in React Native which don't incur the render cost of <Text/> (which registers touch handlers).",
   "main": "index.js",
   "files": [
     "README.md",

@@ -30,6 +30,12 @@ public class BoringTextModule extends SimpleViewManager<TextView> {
 
     @ReactMethod
     public TextView createViewInstance(ThemedReactContext context) {
-        return new TextView(context);
+        final TextView textView = new TextView(context);
+
+        // This centre-aligns the text. This is an unconfigurable
+        // default for now.
+        textView.setGravity(1);
+
+        return textView;
     }
 }
